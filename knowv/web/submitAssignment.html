@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Assignment</title>
+    <link rel="stylesheet" href="css/submitAssignment.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Submit Assignment</h2>
+
+        <div class="assignment-box">
+            <h3>Assignment Title: Introduction to OOP</h3>
+            <p>Deadline: <strong>2025-11-30, 11:59 PM</strong></p>
+
+            <div class="countdown">
+                Time Left: <span id="timer">12h : 45m : 32s</span>
+            </div>
+        </div>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <div class="input-group">
+                <label>Upload Your Work</label>
+                <input type="file" required>
+            </div>
+
+            <button type="submit" class="btn">Submit Assignment</button>
+
+            <p class="back">
+                <a href="studentDashboard.html">⬅ Back to Dashboard</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script>
+        // Simple Demo Countdown (static)
+        const timer = document.getElementById("timer");
+
+        function demoCountdown() {
+            timer.textContent = "12h : 45m : 32s";
+        }
+
+        setInterval(demoCountdown, 1000); 
+    </script>
+
+</body>
+</html>

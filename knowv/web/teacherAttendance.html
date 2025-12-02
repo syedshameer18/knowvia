@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Attendance - Knowvia</title>
+    <link rel="stylesheet" href="css/teacherAttendance.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Mark Attendance</h2>
+
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Status</th>
+            </tr>
+
+            <!-- Sample list -->
+            <tr>
+                <td>Shameer</td>
+                <td>
+                    <label><input type="radio" name="s1" checked> Present</label>
+                    <label><input type="radio" name="s1"> Absent</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rahul</td>
+                <td>
+                    <label><input type="radio" name="s2" checked> Present</label>
+                    <label><input type="radio" name="s2"> Absent</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Priya</td>
+                <td>
+                    <label><input type="radio" name="s3" checked> Present</label>
+                    <label><input type="radio" name="s3"> Absent</label>
+                </td>
+            </tr>
+        </table>
+
+        <button id="save">Save Attendance</button>
+        <a id="back" href="teacherDashboard.html">← Back to Dashboard</a>
+    </div>
+
+</body>
+</html>

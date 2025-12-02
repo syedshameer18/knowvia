@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Class | Virtual Classroom</title>
+    <link rel="stylesheet" href="css/createClass.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Create New Classroom</h2>
+
+        <form id="createClassForm">
+            <label>Class Name</label>
+            <input type="text" placeholder="Enter subject or class name" required>
+
+            <label>Description</label>
+            <textarea placeholder="Enter short description"></textarea>
+
+            <label>Generate Join Code</label>
+            <div class="join-code-box">
+                <input type="text" id="joinCode" readonly>
+                <button type="button" onclick="generateCode()">Generate</button>
+            </div>
+
+            <button type="submit" class="submit-btn">Create Class</button>
+        </form>
+    </div>
+
+    <script>
+        function generateCode() {
+            let code = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("joinCode").value = code;
+        }
+    </script>
+
+</body>
+</html>

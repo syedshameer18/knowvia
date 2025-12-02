@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Study Material</title>
+    <link rel="stylesheet" href="css/uploadMaterial.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Upload Study Material</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <div class="input-group">
+                <label>Material Title</label>
+                <input type="text" placeholder="Enter topic title" required>
+            </div>
+
+            <div class="input-group">
+                <label>Upload File</label>
+                <input type="file" required>
+            </div>
+
+            <div class="input-group">
+                <label>Select Tag</label>
+                <select required>
+                    <option value="">-- Select --</option>
+                    <option>Important</option>
+                    <option>Exam</option>
+                    <option>Basics</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Upload</button>
+
+            <p class="back">
+                <a href="teacherDashboard.html">⬅ Back to Dashboard</a>
+            </p>
+
+        </form>
+    </div>
+
+</body>
+</html>
