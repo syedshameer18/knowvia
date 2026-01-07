@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Virtual Classroom</title>
+    <link rel="stylesheet" href="css/studentDashboard.css">
+</head>
+
+<body>
+    <div class="xp-section">
+    <div class="user-stats">
+        <h4>Your Progress</h4>
+        <p>Knowvia Coins: <span id="userCoins">120</span> 🪙</p>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 70%;"></div>
+        </div>
+    </div>
+
+    <div class="leaderboard-card">
+        <h4>Top Scholars (Weekly)</h4>
+        <ul class="leaderboard-list">
+            <li><span>1. Rahul S.</span> <span>450 XP</span></li>
+            <li><span>2. Priya K.</span> <span>420 XP</span></li>
+            <li><span>3. Shameer</span> <span>390 XP</span></li>
+        </ul>
+    </div>
+</div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>KnowVia Classroom</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="joinClass.html">Join Class</a></li>
+            <li><a href="viewMaterials.html">Materials</a></li>
+            <li><a href="viewAssignments.html">Assignments</a></li>
+            <li><a href="viewDoubts.html">Doubts</a></li>
+            <li><a href="viewAttendance.html">Attendance</a></li>
+            <li><a href="login.html" class="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <h3>Welcome, Student 👋</h3>
+
+        <div class="grid">
+<div class="card study-group-card" id="studyGroupBtn">
+    <h4>Smart Study Group</h4>
+    <p id="groupStatus">Not studying? Click to join a group.</p>
+</div>
+            <a href="joinClass.html" class="card">
+                <h4>Join Class</h4>
+                <p>Enter class code & join classroom</p>
+            </a>
+
+            <a href="viewMaterials.html" class="card">
+                <h4>Study Materials</h4>
+                <p>View & download notes</p>
+            </a>
+
+            <a href="viewAssignments.html" class="card">
+                <h4>Assignments</h4>
+                <p>Submit your tasks on time</p>
+            </a>
+
+            <a href="viewDoubts.html" class="card">
+                <h4>Doubts Forum</h4>
+                <p>Ask questions and get answers</p>
+            </a>
+
+            <a href="viewAttendance.html" class="card">
+                <h4>Attendance</h4>
+                <p>Track your attendance percentage</p>
+            </a>
+
+        </div>
+
+    </div>
+<script>
+let isStudying = false;
+let studyCount = 1; // Simulated count
+
+function toggleStudy() {
+    const btn = document.querySelector(".join-btn");
+    const status = document.getElementById("groupStatus");
+    
+    isStudying = !isStudying;
+
+    if (isStudying) {
+        btn.innerText = "Stop Studying";
+        btn.style.background = "#e63946";
+        status.innerHTML = "Status: <b>Looking for partners...</b>";
+        
+        // Simulate finding 2 more people after 3 seconds
+        setTimeout(() => {
+            if(isStudying) {
+                status.innerHTML = "✅ <b>Group Found!</b> (Shameer, Priya, & 2 others)";
+                alert("A temporary Study Chat has been created for you!");
+            }
+        }, 3000);
+    } else {
+        btn.innerText = "Start Studying";
+        btn.style.background = "#4e73df";
+        status.innerText = "Not studying? Click to join a group.";
+    }
+}
+</script>
+</body>
+</html>
+

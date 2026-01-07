@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Study Materials</title>
+    <link rel="stylesheet" href="css/viewMaterials.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Study Materials</h2>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search by tag or title...">
+        </div>
+<div class="focus-timer" id="focusBox">
+    <span>Focus Mode: <b id="timerDisplay">25:00</b></span>
+    <button onclick="startFocus()">Start Focus</button>
+</div>
+        <div class="material-list">
+
+            <!-- Material 1 -->
+            <div class="material-card">
+                <h3>Introduction to Java</h3>
+                <p>Eg: Basics</p>
+                <button>Open</button>
+            </div>
+
+            <!-- Material 2 -->
+            <div class="material-card">
+                <h3>OOP Concepts Notes</h3>
+                <p>Eg: Important</p>
+                <button>Open</button>
+            </div>
+
+            <!-- Material 3 -->
+            <div class="material-card">
+                <h3>Exam Guide PDF</h3>
+                <p>Eg: Exam</p>
+                <button>Open</button>
+            </div>
+
+        </div>
+
+        <p class="back">
+            <a href="studentDashboard.html">⬅ Back to Dashboard</a>
+        </p>
+
+    </div>
+
+<script src="focustime.js"></script>
+</body>
+</html>
